@@ -1,0 +1,30 @@
+<%= render "shared/header" %>
+<div class='main'>
+
+  <%# メニューバー %>
+  <div class="side-bar-header">
+    <ul class="ddmenu">
+      <li><a href="#">メニュー</a>
+        <ul>
+          <li><a href="#">新規登録</a></li>
+          <li><a href="#">ログイン</a></li>
+          <li><a href="#">リスト3</a></li>
+          <li><a href="#">リスト4</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  <%# /メニューバー %>
+
+  <%# 投稿一覧 %>
+  <div class="main-post">
+    <% @posts.each do |post| %>
+    <%# <div class="content_post" style="background-image: url(<%= tweet.image %>);"> %>
+      <p><%= post.text %></p>
+      <span class="name">
+        <%= post.title %>
+      </span>
+    <%# </div> %>
+    <% end %>
+  </div>
+  <%# /投稿一覧 %>
