@@ -6,7 +6,7 @@
 | email                 | string  | null: false, unique: true |
 | encrypted_password    | string  | null: false               |
 | profile               | text    |                           |
-| platform              | string  |                           |
+| platform_id           | integer |                           |
 | hiest_damage          | integer |                           |
 | hiest_kill            | integer |                           |
 | hiest_rank            | string  |                           |
