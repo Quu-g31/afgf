@@ -1,3 +1,9 @@
+## アプリ名
+
+### afgf (Apex for Gathering Friendsの略)
+
+
+
 ### users
 
 | Column                | Type    | Options                   |
