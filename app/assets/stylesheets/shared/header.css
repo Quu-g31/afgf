@@ -4,9 +4,16 @@
 
 .top-page-header {
   width: 100vw;
-  padding: 2vh 15vw;
+  padding: 0.5vh 15vw;
   display: flex;
   flex-direction: column;
+  background-color: #3ccace;
+  border: 1px solid;
+  margin-bottom: 20px;
+}
+
+.header-title {
+  text-decoration: none;
 }
 
 .search-bar-contents {
@@ -37,7 +44,7 @@
   width: 5vh;
   border: 0;
   cursor: pointer;
-  background-color: #3ccace;
+  background-color: #888888;
   padding: 8px;
 }
 
@@ -106,7 +113,9 @@
 .post {
   padding: 5px;
   text-decoration: none;
+  /* border: 1px solid;
+  border-color: #ffffff; */
   color: #ffffff;
   margin-left: 3vw;
-  background-color: #3ccace;
+  background-color: #888888;
 }

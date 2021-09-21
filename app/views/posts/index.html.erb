@@ -19,10 +19,57 @@
   <%# 投稿一覧 %>
   <div class="main-post">
     <% @posts.each do |post| %>
-      <p><%= post.title %></p>
-      <span class="name">
-        <%= post.text %>
-      </span>
+      <div class="post-contents">
+      <h4>募集文</h4>
+      <div class="created"><%= l post.created_at %></div>
+        <table>
+          <thead>
+            <tr>
+              <th>タイトル</th>
+              <th>プラットフォーム</th>
+              <th>目的</th>
+              <th>募集ユーザー</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class = "post-title">
+                <%= post.title %>
+              </td>
+              <td class = "post-platform">
+                <%= post.platform.name %>
+              </td>
+              <td class = "post-purpose">
+                <%= post.purpose.name %>
+              </td>
+              <td class = "post-user">
+                <%= post.user.nickname %>
+              </td>
+            </tr>
+            <tr>
+              <td></td>
+              <td class = "post-text">
+                <%= post.text %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     <% end %>
   </div>
   <%# /投稿一覧 %>
+
+  <%# その他のコンテンツ %>
+  <div class = "contents">
+    <ul class="slider">
+      <li><%= link_to image_tag("https://media.contentapi.ea.com/content/dam/apex-legends/images/2019/01/apex-featured-image-16x9.jpg.adapt.crop16x9.1023w.jpg", size: '288x192', class:"img"), "https://www.ea.com/ja-jp/games/apex-legends/news" %></li>
+      <li><%= link_to image_tag("https://automaton-media.com/wp-content/uploads/2020/10/20201020-140627-header-696x392.jpg", size: '288x192', class:"img"), "https://www.ea.com/ja-jp/games/apex-legends/maps" %></li>
+      <li><%= link_to image_tag("https://yayuyota.jp/wp-content/uploads/2021/03/twitter-bird-blue-top1.png", size: '288x192', class:"img"), "https://twitter.com/PlayApex?s=20" %></li>
+      <li><img src="https://www.gamespark.jp/imgs/zoom/441310.jpg" alt=""></li>
+      <li><img src="https://pbs.twimg.com/media/EzWkwFzVgAQp1Ub.jpg" alt=""></li>
+    </ul>
+  </div>
+  <%# /その他のコンテンツ %>
+
+</div>
+<%= render "shared/footer" %>
