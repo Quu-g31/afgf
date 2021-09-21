@@ -1,0 +1,6 @@
+.main-footer {
+  border-top: 1px solid;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
