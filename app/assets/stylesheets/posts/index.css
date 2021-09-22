@@ -78,7 +78,7 @@ th, td {
 }
 
 thead > tr > th {
-  background-color: #cce;
+  background-color: #3ccace;
   font-size: 18px;
   border-bottom: 2px solid #999;
 }
@@ -87,6 +87,10 @@ thead > tr > th {
   display: flex;
   justify-content: space-between;
 } */
+
+.main-post-text {
+  border-bottom: 1px solid;
+}
 
 
 /*========= slickのためのCSS ===============*/
