@@ -1,0 +1,28 @@
+<%= render "shared/secondheader" %>
+
+<div class = "post-content">
+  <h2 class="post-info">募集文を入力</h2>
+  <%= form_with(model: @post, local: true) do |f| %>
+    <div class = "post-title">
+      <%= f.label :title %><br />
+      <%= f.text_field :title, placeholder: "Title" %>
+    </div>
+    <div class = "post-text">
+      <%= f.label :text %><br />
+      <%= f.text_area :text, placeholder: "text", rows: "10" %>
+    </div>
+    <div class = "post-platform">
+      <%= f.label :platform %><br />
+      <%= f.collection_select(:platform_id, Platform.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+    </div>
+    <div class = "post-purpose">
+      <%= f.label :purpose %><br />
+      <%= f.collection_select(:purpose_id, Purpose.all, :id, :name, {}, {class:"select-box", id:"item-category"}) %>
+    </div>
+    <div class = "post-send">
+      <%= f.submit "SEND" %>
+    </div>
+  <% end %>
+</div>
+
+<%= render "shared/footer" %>
