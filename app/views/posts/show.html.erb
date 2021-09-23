@@ -1,0 +1,56 @@
+<%= render "shared/secondheader" %>
+<div class="main-show">
+  <div class="show-contents">
+        <div class="created">投稿日時 : <%= l @post.created_at %></div>
+        <table>
+          <thead>
+            <tr>
+              <th>タイトル</th>
+              <th>プラットフォーム</th>
+              <th>目的</th>
+              <th>募集ユーザー</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class = "post-title">
+                <%= @post.title %>
+              </td>
+              <td class = "post-platform">
+                <%= @post.platform.name %>
+              </td>
+              <td class = "post-purpose">
+                <%= @post.purpose.name %>
+              </td>
+              <td class = "post-user">
+                <%= @post.user.nickname %>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class ="main-post-text">
+        <h5>-----募集内容-----</h5>
+          <%= @post.text %>
+        </div>
+  </div>
+  <div class ="form-comments">
+  <h4>＜コメント＞</h4>
+    <div class="form-comment">
+      <%= form_with model: [@post, @comment] do |f| %>
+        <%= f.text_field :text,class:"comment-form" %> 
+        <%= f.submit 'SEND',class:"comment-btn" %> 
+      <% end %>
+    </div>
+      <div class='comment' id='comments'>
+        <% @comments.reverse_each do |comment| %>
+        <div class="comment-contents">
+          <p><%= comment.text %></p>
+          <%=l comment.created_at %>
+          <%= comment.user.nickname %>
+        </div>
+        <% end %>
+      </div>
+  </div>
+
+</div>
+<%= render "shared/footer" %>
