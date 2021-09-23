@@ -64,6 +64,11 @@ ul.ddmenu li:hover ul {
   margin-right: 50px;
 }
 
+.post-link {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
 table {
   border: 2px solid #555;
   border-collapse: collapse;
@@ -90,6 +95,14 @@ thead > tr > th {
 
 .main-post-text {
   border-bottom: 1px solid;
+}
+.more {
+  display: flex;
+  padding-left: 450px;
+}
+.more-lists {
+  width: 50px;
+  height: 50px;
 }
 
 

@@ -1,0 +1,36 @@
+.main-show {
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  align-items: center;
+}
+
+.show-contents {
+  text-align: center;
+}
+
+.form-comments {
+  overflow: scroll;
+  text-align: center;
+}
+
+.form-comment {
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.comment {
+  overflow: scroll;
+  height: calc(100vh - 100px);
+  flex-direction: column;
+  display: inline-block;
+  text-align: center;
+}
+
+.comment-contents {
+  border: 1px solid;
+}
+
+.comment-btn {
+
+}
